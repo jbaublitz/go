@@ -4,7 +4,7 @@
 
 // +build !mips64
 // +build !mips64le
-// +build linux
+// +build ebbrt 
 
 package runtime
 
