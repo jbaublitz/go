@@ -56,6 +56,7 @@ var headers = []struct {
 	{"solaris", Hsolaris},
 	{"windows", Hwindows},
 	{"windowsgui", Hwindows},
+	{"ebbrt", Hlinux},
 }
 
 func headtype(name string) int {
