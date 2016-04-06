@@ -84,7 +84,7 @@
 // A file may have multiple build constraints. The overall constraint is the AND
 // of the individual constraints. That is, the build constraints:
 //
-//	// +build linux darwin
+//	// +build ebbrt linux darwin
 //	// +build 386
 //
 // corresponds to the boolean formula:
