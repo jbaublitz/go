@@ -4,7 +4,7 @@
 
 // +build cgo
 
-// +build !android,linux
+// +build !android,linux ebbrt
 
 #include <stdarg.h>
 #include <stdio.h>
