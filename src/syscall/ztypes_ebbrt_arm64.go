@@ -1,7 +1,7 @@
 // Created by cgo -godefs - DO NOT EDIT
 // cgo -godefs -- -fsigned-char types_linux.go
 
-// +build arm64,linux
+// +build arm64,ebbrt
 
 package syscall
 

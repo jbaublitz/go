@@ -675,6 +675,7 @@ const (
 	Hplan9
 	Hsolaris
 	Hwindows
+	Hebbrt
 )
 
 type Plist struct {

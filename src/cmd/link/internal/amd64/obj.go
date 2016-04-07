@@ -160,6 +160,7 @@ func archinit() {
 		}
 
 	case obj.Hlinux, /* elf64 executable */
+		obj.Hebbrt,     /* ebbrt */
 		obj.Hfreebsd,   /* freebsd */
 		obj.Hnetbsd,    /* netbsd */
 		obj.Hopenbsd,   /* openbsd */

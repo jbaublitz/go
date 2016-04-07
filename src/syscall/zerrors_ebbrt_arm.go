@@ -4,7 +4,7 @@
 // Created by cgo -godefs - DO NOT EDIT
 // cgo -godefs -- _const.go
 
-// +build arm,linux
+// +build arm,ebbrt
 
 package syscall
 

@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // +build ppc64 ppc64le
-// +build linux
+// +build ebbrt
 
 package runtime
 

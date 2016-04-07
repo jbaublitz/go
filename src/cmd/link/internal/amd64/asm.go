@@ -679,6 +679,7 @@ func asmb() {
 		ld.Debug['8'] = 1 /* 64-bit addresses */
 
 	case obj.Hlinux,
+		obj.Hebbrt,
 		obj.Hfreebsd,
 		obj.Hnetbsd,
 		obj.Hopenbsd,

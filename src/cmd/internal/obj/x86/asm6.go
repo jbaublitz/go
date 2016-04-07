@@ -2209,7 +2209,8 @@ func prefixof(ctxt *obj.Link, p *obj.Prog, a *obj.Addr) int {
 			default:
 				log.Fatalf("unknown TLS base register for %s", obj.Headstr(ctxt.Headtype))
 
-			case obj.Hlinux:
+			case obj.Hlinux,
+				obj.Hebbrt:
 				if isAndroid {
 					return 0x64 // FS
 				}
@@ -4176,6 +4177,7 @@ func doasm(ctxt *obj.Link, p *obj.Prog) {
 							log.Fatalf("unknown TLS base location for %s", obj.Headstr(ctxt.Headtype))
 
 						case obj.Hlinux,
+							obj.Hebbrt,
 							obj.Hnacl:
 							if ctxt.Flag_shared != 0 {
 								// Note that this is not generating the same insns as the other cases.
@@ -4259,7 +4261,8 @@ func doasm(ctxt *obj.Link, p *obj.Prog) {
 					default:
 						log.Fatalf("unknown TLS base location for %s", obj.Headstr(ctxt.Headtype))
 
-					case obj.Hlinux:
+					case obj.Hlinux,
+						obj.Hebbrt:
 						if ctxt.Flag_shared == 0 {
 							log.Fatalf("unknown TLS base location for linux without -shared")
 						}

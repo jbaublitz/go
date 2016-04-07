@@ -7,6 +7,7 @@
 // +build !windows
 // +build !nacl
 // +build !linux !amd64
+// +build !ebbrt !amd64
 
 package runtime
 

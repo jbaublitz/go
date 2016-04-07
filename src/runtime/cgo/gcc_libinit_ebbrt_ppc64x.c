@@ -5,7 +5,7 @@
 // +build cgo
 
 // TODO: see issue #10410
-// +build linux
+// +build ebbrt
 // +build ppc64 ppc64le
 
 #include <stdio.h>

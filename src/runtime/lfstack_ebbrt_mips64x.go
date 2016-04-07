@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // +build mips64 mips64le
-// +build linux
+// +build ebbrt
 
 package runtime
 

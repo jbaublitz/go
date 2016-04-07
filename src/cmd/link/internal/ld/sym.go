@@ -56,6 +56,7 @@ var headers = []struct {
 	{"solaris", obj.Hsolaris},
 	{"windows", obj.Hwindows},
 	{"windowsgui", obj.Hwindows},
+	{"ebbrt", obj.Hebbrt},
 }
 
 func linknew(arch *LinkArch) *Link {
@@ -97,6 +98,7 @@ func linknew(arch *LinkArch) *Link {
 		 * Known to low-level assembly in package runtime and runtime/cgo.
 		 */
 	case obj.Hlinux,
+		obj.Hebbrt,
 		obj.Hfreebsd,
 		obj.Hnetbsd,
 		obj.Hopenbsd,
