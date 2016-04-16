@@ -166,7 +166,7 @@ func TestUnixgramZeroByteBuffer(t *testing.T) {
 }
 
 func TestUnixgramAutobind(t *testing.T) {
-	if runtime.GOOS != "linux" {
+	if runtime.GOOS != "linux" && runtime.GOOS != "ebbrt" {
 		t.Skip("autobind is linux only")
 	}
 
@@ -198,7 +198,7 @@ func TestUnixgramAutobind(t *testing.T) {
 }
 
 func TestUnixAutobindClose(t *testing.T) {
-	if runtime.GOOS != "linux" {
+	if runtime.GOOS != "linux" && runtime.GOOS != "ebbrt" {
 		t.Skip("autobind is linux only")
 	}
 
@@ -328,7 +328,7 @@ func TestUnixConnLocalAndRemoteNames(t *testing.T) {
 		}
 
 		switch runtime.GOOS {
-		case "android", "linux":
+		case "android", "linux", "ebbrt":
 			if laddr == "" {
 				laddr = "@" // autobind feature
 			}
@@ -385,7 +385,7 @@ func TestUnixgramConnLocalAndRemoteNames(t *testing.T) {
 		}()
 
 		switch runtime.GOOS {
-		case "android", "linux":
+		case "android", "linux", "ebbrt":
 			if laddr == "" {
 				laddr = "@" // autobind feature
 			}

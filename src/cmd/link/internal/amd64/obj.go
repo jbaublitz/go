@@ -106,6 +106,7 @@ func archinit() {
 	case obj.Hdarwin,
 		obj.Hdragonfly,
 		obj.Hfreebsd,
+		obj.Hebbrt,
 		obj.Hlinux,
 		obj.Hnacl,
 		obj.Hnetbsd,

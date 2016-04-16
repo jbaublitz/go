@@ -827,7 +827,7 @@ func Elfinit() {
 	// 32-bit architectures
 	case '5':
 		// we use EABI on both linux/arm and freebsd/arm.
-		if HEADTYPE == obj.Hlinux || HEADTYPE == obj.Hfreebsd {
+		if HEADTYPE == obj.Hlinux || HEADTYPE == obj.Hebbrt || HEADTYPE == obj.Hfreebsd {
 			// We set a value here that makes no indication of which
 			// float ABI the object uses, because this is information
 			// used by the dynamic linker to compare executables and
@@ -2135,7 +2135,8 @@ func Asmbelf(symo int64) {
 		sh.addralign = 1
 		if interpreter == "" {
 			switch HEADTYPE {
-			case obj.Hlinux:
+			case obj.Hlinux,
+				obj.Hebbrt:
 				interpreter = Thearch.Linuxdynld
 
 			case obj.Hfreebsd:
@@ -2379,7 +2380,7 @@ func Asmbelf(symo int64) {
 		}
 	}
 
-	if HEADTYPE == obj.Hlinux {
+	if HEADTYPE == obj.Hlinux || HEADTYPE == obj.Hebbrt {
 		ph := newElfPhdr()
 		ph.type_ = PT_GNU_STACK
 		ph.flags = PF_W + PF_R
