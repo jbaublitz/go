@@ -4,7 +4,7 @@
 
 // +build cgo
 
-// +build linux,amd64
+// +build linux,amd64 ebbrt,amd64
 
 #include <errno.h>
 #include <stdint.h>

@@ -313,7 +313,7 @@ func (mode *BuildMode) Set(s string) error {
 		*mode = BuildmodePIE
 	case "c-archive":
 		switch goos {
-		case "darwin", "linux":
+		case "darwin", "linux", "ebbrt":
 		default:
 			return badmode()
 		}

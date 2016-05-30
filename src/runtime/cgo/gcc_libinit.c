@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // +build cgo
-// +build darwin dragonfly freebsd linux netbsd solaris
+// +build darwin dragonfly freebsd linux ebbrt netbsd solaris
 // +build !ppc64,!ppc64le
 
 #include <pthread.h>

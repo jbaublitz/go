@@ -18,6 +18,7 @@ package cgo
 #cgo freebsd LDFLAGS: -lpthread
 #cgo android LDFLAGS: -llog
 #cgo !android,linux LDFLAGS: -lpthread
+#cgo ebbrt LDFLAGS: -lpthread
 #cgo netbsd LDFLAGS: -lpthread
 #cgo openbsd LDFLAGS: -lpthread
 // we must explicitly link msvcrt, because runtime needs ntdll, and ntdll
